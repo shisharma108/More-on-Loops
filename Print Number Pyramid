@@ -1,0 +1,59 @@
+Print Number Pyramid
+Send Feedback
+Print the following pattern for a given n.
+For eg. N = 6
+123456
+  23456
+    3456
+      456
+        56
+          6
+        56
+      456
+    3456
+  23456
+123456
+Sample Input 1 :
+4
+Sample Output 1 :
+1234
+  234
+    34
+      4
+    34
+  234
+1234
+
+
+
+
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+n=int(input())
+i=1
+while i<=n:
+    spaces = 1    
+    while spaces<i:
+        print(' ',end="")
+        spaces=spaces+1
+    num=i
+    j=spaces
+    while j<=n:
+        print(num, end="")
+        num+=1
+        j+=1
+    print()
+    i=i+1
+k=1
+while k<n:
+    space=1
+    while space<n-k:
+        print(" ",end="")
+        space+=1
+    j=k+1
+    while j>0:
+        print(n-j+1,end="")
+        j-=1
+    print()
+    k+=1
