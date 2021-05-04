@@ -1,0 +1,21 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+n = int(input())
+first_half = n
+second_half = n - 1
+#first half
+for currRow in range(1,first_half+1):
+    for spaces in range(currRow):
+        if spaces ==0:
+            continue
+        print(' ',end='')
+    for currCol in range(currRow,first_half+1):
+        print(currCol,end='')
+    print()
+#second half
+for currRow in range(second_half,0,-1):
+    for spaces in range(currRow-1):
+        print(' ',end = '')
+    for currCol in range(currRow,second_half+2):
+        print(currCol,end='')
+    print()
